@@ -57,7 +57,6 @@ class SkrtResPartner(models.Model):
         result = []
         name_pattern = "%(name)s [%(comercial_name)s]"
         orig_name = dict(super(SkrtResPartner, self).name_get())
-        print("\n\n%s\n\n\n"%orig_name)
         for partner in self:
             name = orig_name[partner.id]
             comercial = partner.parent_id and partner.parent_id.comercial\
